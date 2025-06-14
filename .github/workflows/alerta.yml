@@ -1,4 +1,4 @@
-name: Send Notification on Push to Main
+name: Git acción con JavaScript
 
 on:
   push:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Send Notification
         run: |
-          curl -X POST -d "Hola Mundo" https://ntfy.sh/devops-itla
+          curl -X POST -d "Se ha ejecutado un archivo: 'Hola Mundo - Maria Mercedes Rosario 2023-1897'" https://ntfy.sh/devops-itla
