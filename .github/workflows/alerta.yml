@@ -9,6 +9,10 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Send Notification
         run: |
-          curl -X POST -d "Nuevo código subido a main" https://ntfy.sh/devops-itla
+          MESSAGE=$(cat hello.js)
+          curl -X POST -d "$MESSAGE" https://ntfy.sh/devops-itla
